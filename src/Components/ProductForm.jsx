@@ -191,7 +191,10 @@ else{
       <>
        <label className='mx-1 text-xl text-zinc-800 '>Photo</label>
        <div className={ "photo w-100 mx-1 mb-2 h-40 border-dotted border-2 border-zinc-700 text-center relative" }>
-         <input type="file" className={form.image==''?
+         <input 
+          type="file" 
+          accept=".jpg,.jpeg,.png,.webp"
+          className={form.image==''?
           'w-100  h-44 text-center py-[15%] px-[20%]':              //to show Choose file text
           'w-100  h-44 text-center py-[15%] px-[20%] text-transparent' //to hide Choose file text when image uploaded
           }
