@@ -87,7 +87,7 @@ const ViewProduct = ({changemode}) => {
                       <td className='p-2'>{item?.price}</td>
                       <td className='p-2'>{item?.stock}</td>
                       <td 
-                      className='p-2 text-xl text-blue-700 hover:cursor-pointer hover:scale-101'
+                      className='p-2 text-xl text-blue-700 hover:cursor-pointer '
                       onClick={()=>changemode(item)}
                       >
                         <MdModeEdit />
