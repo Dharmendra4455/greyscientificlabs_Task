@@ -196,7 +196,7 @@ else{
           accept=".jpg,.jpeg,.png,.webp"
           className={form.image==''?
           'w-100  h-44 text-center py-[16%] pl-[10vw]':              //to show Choose file text
-          ' text-transparent' //to hide Choose file text when image uploaded
+          'w-100  h-44 text-center py-[16%] pl-[10vw] text-transparent' //to hide Choose file text when image uploaded
           }
           multiple={false} 
           onChange={(e)=>Setform((prev)=>({...prev,image:URL.createObjectURL(e.target.files[0])}))} 
