@@ -33,8 +33,8 @@ const ViewProduct = ({changemode}) => {
   }, [Search, CurrentPage,iscardview])                   
   return (
     <>
-      <div className="outerbody ">
-        <div className="innerbody m-2 min-w-150 overflow-auto w-full  border-2 border-zinc-600 ">
+      <div className="outerbody  h-fit ">
+        <div className="innerbody m-2  w-full  border-2 border-zinc-600 ">
           <div className="search_view flex items-center justify-between">
 
             {/* Search field */}
@@ -58,10 +58,11 @@ const ViewProduct = ({changemode}) => {
           </div>
 
           {/* Table_Section */}
-         {!iscardview && <div className="Table">
-            <table className='table-auto min-w-150 overflow-scroll w-full'>
+         {!iscardview && 
+         <div className="Table overflow-x-auto">
+            <table className='min-w-150  w-full'>
               <thead>
-                <tr className='font-bold border-b-2 border-t-2 border-zinc-500 mx-2'>
+                <tr className='font-bold border-b-2 border-t-2 border-zinc-500 mx-2 '>
                   <td className='p-2'>Name</td>
                   <td className='p-2'>Category</td>
                   <td className='p-2'>Price</td>
