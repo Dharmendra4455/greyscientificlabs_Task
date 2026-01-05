@@ -71,9 +71,9 @@ else{
 }
   return (
     <>
-       <div className="body p-2 m-2">
+       <div className="body w-full">
         {/* create_View_Button */}
-         <div className="create_View_Product flex gap-2 text-xl  font-semibold text-zinc-700 ">
+         <div className=" create_View_Product flex gap-2 text-xl  py-2 font-semibold text-zinc-700 ">
           <div 
           className={mode=='add' ?'border-b-4 border-violet-800 bg-zinc-100 pt-2 px-4 hover:cursor-pointer':'pt-2 px-4 hover:cursor-pointer' }
           onClick={()=>{
@@ -98,7 +98,7 @@ else{
 
        <div className={mode=='add' ?"inputcontainer flex flex-wrap":'hidden'}>
         {/* Name field */}
-        <div className="name text-xl text-zinc-800  p-2 w-100 ">
+        <div className="name text-xl text-zinc-800  p-2 w-90 ">
           <label >Name<sup className='text-red-600 '>*</sup></label>
           <input 
           required
@@ -120,7 +120,7 @@ else{
           <div className={error=='name' ? "error text-sm text-red-600":'hidden'}>Error: Please enter Name</div>
         </div>
         {/* Category field */}
-        <div className="name text-xl text-zinc-800  p-2 w-100 ">
+        <div className="name text-xl text-zinc-800  p-2 w-90 ">
           <label >Category<sup className='text-red-600 '>*</sup></label>
           <input 
           value={form.category}
@@ -139,7 +139,7 @@ else{
             <div className={error=='category' ? "error text-sm text-red-600":'hidden'}>Error: Please enter category</div>
         </div>
         {/* Price field */}
-        <div className="name text-xl text-zinc-800  p-2 w-100 ">
+        <div className="name text-xl text-zinc-800  p-2 w-90 ">
           <label >Price<sup className='text-red-600 '>*</sup></label>
           <input
           value={form.price} 
@@ -154,7 +154,7 @@ else{
          <div className={error=='price' ? "error text-sm text-red-600":'hidden'}>Error: Please enter price</div>
         </div>
         {/* Stock field */}
-        <div className="name text-xl text-zinc-800  p-2 w-100 ">
+        <div className="name text-xl text-zinc-800  p-2 w-90 ">
           <label >Stock<sup className='text-red-600 '>*</sup></label>
           <input
           value={form.stock} 
@@ -169,7 +169,7 @@ else{
          <div className={error=='stock' ? "error text-sm text-red-600":'hidden'}>Error: Please enter stock</div>
         </div>
         {/* Description field */}
-        <div className="name text-xl text-zinc-800  p-2 w-100 xl:w-[61%] ">
+        <div className="name text-xl text-zinc-800  p-2 w-90 xl:w-180 2xl:w-[99%] ">
           <label >Description</label>
           <input 
           value={form.description}
@@ -193,7 +193,7 @@ else{
       {mode=='add' &&
       <>
        <label className='mx-1 text-xl text-zinc-800 '>Photo</label>
-       <div className={ "photo max-w-100 w-auto mx-1 mb-2 h-40 border-dotted border-2 border-zinc-700 text-center relative" }>
+       <div className={ "photo max-w-88 w-auto mx-1 mb-2 h-40 border-dotted border-2 border-zinc-700 text-center relative" }>
          <input 
           type="file" 
           accept=".jpg,.jpeg,.png,.webp"
