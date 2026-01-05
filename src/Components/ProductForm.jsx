@@ -17,8 +17,8 @@ const ProductForm = () => {
 })
 
 const Add_UpdateHandler=()=>{
-  if(Isupdatemode){
-   const item=Products[form.id-1]
+  if(Isupdatemode && Products.length>0){
+   const item = Products.find(p => p.id === Number(form.id));
    item.image=form.image
    item.name=form.name
    item.category=form.category
@@ -106,7 +106,10 @@ else{
           const ragex=/^[A-Za-z ]*$/  //name regex
           const value=e.target.value
           if(value==''|| ragex.test(value))
-            Setform((prev)=>({...prev, id:Products.length+1,name:value}))
+            Setform((prev)=>({...prev,name:value}))
+          if(!Isupdatemode){
+             Setform((prev)=>({...prev, id:Products.length+1}))
+          }
           }}
           value={form.name}
           type="text" 
