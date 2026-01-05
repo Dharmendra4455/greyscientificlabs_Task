@@ -33,8 +33,8 @@ const ViewProduct = ({changemode}) => {
   }, [Search, CurrentPage,iscardview])                   
   return (
     <>
-      <div className="outerbody  h-fit ">
-        <div className="innerbody m-2  w-full  border-2 border-zinc-600 ">
+      <div className="outerbody  h-fit w-full">
+        <div className="innerbody p-2    border-2 border-zinc-600 ">
           <div className="search_view flex items-center justify-between">
 
             {/* Search field */}
